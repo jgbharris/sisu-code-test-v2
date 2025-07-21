@@ -1,12 +1,14 @@
-#SISU code test
+SISU code test
 
 ## Demo
 
-- **[Video: Full User Flow](https://github.com/user-attachments/assets/45fa3834-d743-47a7-93f3-6c2dc3570a7d)**
-https://github.com/user-attachments/assets/45fa3834-d743-47a7-93f3-6c2dc3570a7d
+Video of whole flow
+https://github.com/user-attachments/assets/0c58990b-3f5a-4550-8e73-dc93a23f6a93
 
-- **[Video: Back Functionality & Answer Pruning](https://github.com/user-attachments/assets/59c6c6b2-a581-4d99-b9e7-6b7bfd7a7112)**  
-https://github.com/user-attachments/assets/59c6c6b2-a581-4d99-b9e7-6b7bfd7a7112
+Video of flow with question answers being changed - logging in console
+https://github.com/user-attachments/assets/3b114f84-779a-43b8-a78c-517707c35653
+
+
 
 ---
 
