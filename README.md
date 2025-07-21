@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+#SISU code test
+
+## Demo
+
+- **[Video: Full User Flow](https://github.com/user-attachments/assets/45fa3834-d743-47a7-93f3-6c2dc3570a7d)**
+https://github.com/user-attachments/assets/45fa3834-d743-47a7-93f3-6c2dc3570a7d
+
+- **[Video: Back Functionality & Answer Pruning](https://github.com/user-attachments/assets/59c6c6b2-a581-4d99-b9e7-6b7bfd7a7112)**  
+https://github.com/user-attachments/assets/59c6c6b2-a581-4d99-b9e7-6b7bfd7a7112
+
+---
+
+## Tech Stack
+
+- **Framework:** Next.js
+- **State Management:** React Context API
+- **Styling:** CSS Modules
+
+---
 
 ## Getting Started
 
-First, run the development server:
+For the BloodPressure simulator, the port will need to be changed to 8080.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+To run this project locally:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Clone the repository**
+    ```bash
+    git clone <your-repo-url>
+    cd <your-repo-directory>
+    ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Install dependencies**
+    ```bash
+    npm install
+    # or
+    yarn install
+    # or
+    pnpm install
+    # or
+    bun install
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Start the development server**
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    # or
+    pnpm dev
+    # or
+    bun dev
+    ```
 
-## Learn More
+4. **Open your browser** and visit [http://localhost:3000](http://localhost:3000) to view the app.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Approach
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The survey json was edited to get the labels and values correct.
+This is being imported from an adjacent file.
 
-## Deploy on Vercel
+### Survey
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Single-route multi-step form:**  
+  All survey questions handled in one route, with navigation logic for forward/back.
+- **Conditional questions:**  
+  Follow-up questions appear only if their preconditions are met.
+- **Answer pruning:**  
+  If a user navigates back and changes an answer, dependent answers are automatically updated/removed.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Blood Pressure
+
+- **Streaming via EventSource:**  
+  Switched from Axios to EventSource for real-time blood pressure data.
+- **User feedback:**  
+  Progress bar indicates initialization; animated heart rate loader displays during reading.
+
+### Results
+
+- **Combined summary:**  
+  Survey answers and blood pressure readings are stored in React Context and displayed together on a results page.
+
+
